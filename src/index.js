@@ -12,7 +12,7 @@ function generatePoem(event) {
   event.preventDefault();
   let instructionsInput = document.querySelector("#user-instructions");
   let apiKey = "7a8a3ab1of0tb43589746b74d2fe8452";
-  let prompt = `User instructions: Please tell me a poem about ${instructionsInput.value}`;
+  let prompt = `User instructions: Generate a poem about ${instructionsInput.value}`;
   let context =
     "You are a talented wordsmith who loves to write poems. Your mission is to generate a haiku poem in basic HTML. Please be polite and follow user instructions.";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
