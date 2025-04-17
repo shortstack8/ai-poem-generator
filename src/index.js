@@ -1,5 +1,4 @@
 function showPoem(response) {
-  console.log("Poem generated successfully!");
   new Typewriter("#poem-body", {
     strings: response.data.answer,
     autoStart: true,
@@ -20,12 +19,6 @@ function generatePoem(event) {
   let poemBody = document.querySelector("#poem-body");
   poemBody.classList.remove("hidden");
   poemBody.innerHTML = `<div class="blink">⏳ Generating a haiku poem about ${instructionsInput.value} especially for you! 💜</div>`;
-
-  console.log(
-    `⏳ Generating a haiku poem about ${instructionsInput.value} especially for you! 💜`
-  );
-  console.log(`Prompt: ${prompt}`);
-  console.log(`Context: ${context}`);
 
   axios.get(apiUrl).then(showPoem);
 }
