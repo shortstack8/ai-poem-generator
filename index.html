@@ -21,19 +21,22 @@
       </header>
 
       <main>
-        <form id="poem-generator-form">
-          <input
-            type="text"
-            placeholder="Enter the topic of the poem"
-            outoffocus
-            required
-            autocomplete="off"
-            class="instructions"
-            id="user-instructions"
-          />
-          <input type="submit" class="submit-button" />
-        </form>
-        <div class="poem" id="poem-body"></div>
+        <div class="form-container">
+          <form id="poem-generator-form">
+            <input
+              type="text"
+              placeholder="Enter a topic for your poem"
+              outoffocus
+              required
+              autocomplete="off"
+              class="instructions"
+              id="user-instructions"
+            />
+            <input type="submit" class="submit-button" />
+          </form>
+          <div class="hint">i.e: Ocean, Cake or Dogs</div>
+        </div>
+        <div class="poem hidden" id="poem-body"></div>
       </main>
 
       <footer>
